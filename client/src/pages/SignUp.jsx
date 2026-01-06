@@ -96,11 +96,11 @@ const SignUpNew = () => {
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="container mx-auto flex min-h-screen items-center justify-center px-6">
         <form className="w-full max-w-md" onSubmit={handleSubmit}>
           <div className="mx-auto flex justify-center">
-            <img className="h-7 w-auto sm:h-8" src={Logo} alt="" />
+            <img className="h-12 w-auto sm:h-14" src={Logo} alt="Orbit Logo" />
           </div>
           {signUpError &&
             Array.isArray(signUpError) &&
@@ -123,13 +123,13 @@ const SignUpNew = () => {
           <div className="mt-6 flex items-center justify-center">
             <Link
               to={"/signin"}
-              className="w-1/3 border-b border-gray-400 pb-4 text-center font-medium text-gray-800"
+              className="w-1/3 border-b border-gray-400 dark:border-gray-600 pb-4 text-center font-medium text-gray-500 dark:text-gray-400"
             >
               Sign In
             </Link>
             <Link
               to={"/signup"}
-              className="text-cente w-1/3 border-b-2 border-blue-500 pb-4 font-medium text-gray-800"
+              className="text-center w-1/3 border-b-2 border-blue-500 pb-4 font-medium text-gray-800 dark:text-gray-100"
             >
               Sign Up
             </Link>
@@ -138,7 +138,7 @@ const SignUpNew = () => {
             <span className="absolute">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mx-3 h-6 w-6 text-gray-300"
+                className="mx-3 h-6 w-6 text-gray-300 dark:text-gray-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -157,7 +157,7 @@ const SignUpNew = () => {
               type="text"
               value={name}
               onChange={handleNameChange}
-              className="block w-full rounded-lg border bg-white px-11 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-11 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Username"
               required
               autoComplete="off"
@@ -165,11 +165,11 @@ const SignUpNew = () => {
           </div>
           <label
             htmlFor="avatar"
-            className="mx-auto mt-6 flex cursor-pointer items-center rounded-lg border-2 border-dashed bg-white px-3 py-3 text-center"
+            className="mx-auto mt-6 flex cursor-pointer items-center rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-3 text-center transition-colors duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-gray-300"
+              className="h-6 w-6 text-gray-300 dark:text-gray-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -181,7 +181,7 @@ const SignUpNew = () => {
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
               />
             </svg>
-            <h2 className="mx-3 text-gray-400">Profile Photo</h2>
+            <h2 className="mx-3 text-gray-400 dark:text-gray-500">Profile Photo</h2>
             <input
               id="avatar"
               type="file"
@@ -207,7 +207,7 @@ const SignUpNew = () => {
             <span className="absolute">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mx-3 h-6 w-6 text-gray-300"
+                className="mx-3 h-6 w-6 text-gray-300 dark:text-gray-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -226,7 +226,7 @@ const SignUpNew = () => {
               value={email}
               onChange={handleEmailChange}
               type="email"
-              className="block w-full rounded-lg border bg-white px-11 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-11 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Email address"
               required
               autoComplete="off"
@@ -236,7 +236,7 @@ const SignUpNew = () => {
             <span className="absolute">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mx-3 h-6 w-6 text-gray-300"
+                className="mx-3 h-6 w-6 text-gray-300 dark:text-gray-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -255,7 +255,7 @@ const SignUpNew = () => {
               type="password"
               value={password}
               onChange={handlePasswordChange}
-              className="block w-full rounded-lg border bg-white px-10 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-10 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Password"
               required
               autoComplete="off"
@@ -265,7 +265,7 @@ const SignUpNew = () => {
             <button
               disabled={loading}
               type="submit"
-              className={`w-full transform rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 ${loading ? "cursor-not-allowed opacity-50" : ""
+              className={`w-full transform rounded-lg bg-blue-500 dark:bg-blue-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-50 ${loading ? "cursor-not-allowed opacity-50" : ""
                 }`}
             >
               {loading ? (
@@ -277,11 +277,11 @@ const SignUpNew = () => {
 
             <div onClick={() => setIsModalOpen(true)} className="mt-6">
               {isConsentGiven && !isModerator ? (
-                <p className="mt-2 cursor-pointer rounded-lg border border-green-500 px-4 py-3 text-center text-sm font-semibold text-green-600">
+                <p className="mt-2 cursor-pointer rounded-lg border border-green-500 dark:border-green-600 px-4 py-3 text-center text-sm font-semibold text-green-600 dark:text-green-500">
                   Context-Based Authentication is enabled
                 </p>
               ) : (
-                <p className="mt-2 cursor-pointer rounded-lg border px-4 py-3 text-center text-sm font-semibold">
+                <p className="mt-2 cursor-pointer rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-3 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">
                   Context-Based Authentication is disabled
                 </p>
               )}
