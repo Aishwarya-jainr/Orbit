@@ -97,7 +97,7 @@ const SignUpNew = () => {
 
   return (
     <section className="bg-white dark:bg-gray-900 transition-colors duration-200">
-      <div className="container mx-auto flex min-h-screen items-center justify-center px-6">
+      <div className="mx-auto flex min-h-screen items-center justify-center">
         <form className="w-full max-w-md" onSubmit={handleSubmit}>
           <div className="mx-auto flex justify-center">
             <img className="h-12 w-auto sm:h-14" src={Logo} alt="Orbit Logo" />
