@@ -1,6 +1,6 @@
-# SocioEcho 🌐
+# Orbit 🌐
 
-A modern social networking platform with **automated content moderation** and **context-based authentication system**.
+A modern social networking platform with **AI-powered content moderation**, **context-based authentication**, and **seamless Light/Dark mode**.
 
 ![License](https://img.shields.io/badge/license-ISC-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)
@@ -8,6 +8,7 @@ A modern social networking platform with **automated content moderation** and **
 
 ## 🚀 Features
 
+- **🌓 Light/Dark Mode** - Seamless theme switching with system preference detection
 - **User Authentication & Authorization** - JWT-based authentication with refresh tokens
 - **Context-Based Security** - Enhanced security with device and location tracking
 - **Social Networking** - Posts, comments, likes, follows, and user profiles
@@ -52,7 +53,7 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 git clone https://github.com/Aishwarya-jainr/SocioEcho.git
-cd SocioEcho
+cd Orbit
 ```
 
 ### 2. Install Dependencies

@@ -1,7 +1,7 @@
 {
-  "name": "socioecho",
+  "name": "orbit",
   "version": "1.0.0",
-  "description": "A social networking platform with automated content moderation and context-based authentication",
+  "description": "Orbit - A modern social networking platform with AI-powered content moderation and context-based authentication",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
