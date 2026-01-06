@@ -39,21 +39,21 @@ const Leftbar = ({ showLeftbar }) => {
       <div className="flex flex-col justify-start items-center">
         <div className="flex flex-col items-start gap-4 w-full p-5">
           <Link
-            className="flex items-center gap-2 text-lg font-medium hover:text-primary"
+            className="flex items-center gap-2 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             to="/home"
           >
             <HiOutlineHome className="text-xl" />
             <p>Home</p>
           </Link>
           <Link
-            className="flex items-center gap-2 text-lg font-medium hover:text-primary"
+            className="flex items-center gap-2 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             to="/profile"
           >
             <HiOutlineUserCircle className="text-xl" />
             <p>Profile</p>
           </Link>
           <Link
-            className="flex items-center gap-2 text-lg font-medium hover:text-primary"
+            className="flex items-center gap-2 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             to="/saved"
           >
             <HiOutlineTag className="text-xl" />
@@ -70,12 +70,12 @@ const Leftbar = ({ showLeftbar }) => {
             </Link>
           )}
 
-          <hr className="w-full my-4 border-gray-300" />
+          <hr className="w-full my-4 border-gray-300 dark:border-gray-700" />
 
           {communityLinks && communityLinks.length > 0 ? (
             <div className="w-full">
               <div className="flex items-center justify-between">
-                <div className="flex gap-1 font-medium items-center">
+                <div className="flex gap-1 font-medium items-center text-gray-700 dark:text-gray-200">
                   <HiOutlineUserGroup className="text-xl" />
                   Communities
                 </div>
@@ -95,7 +95,7 @@ const Leftbar = ({ showLeftbar }) => {
                 {communityLinks.map((communityLink) => (
                   <li key={communityLink.href}>
                     <Link
-                      className="flex items-center hover:text-primary text-gray-600 font-medium gap-2 py-1"
+                      className="flex items-center hover:text-primary-500 dark:hover:text-primary-400 text-gray-600 dark:text-gray-300 font-medium gap-2 py-1 transition-colors"
                       to={communityLink.href}
                     >
                       {communityLink.label}
@@ -105,14 +105,14 @@ const Leftbar = ({ showLeftbar }) => {
               </ul>
             </div>
           ) : (
-            <div>No communities found.</div>
+            <div className="text-gray-600 dark:text-gray-400">No communities found.</div>
           )}
           {user && user.role === "general" && (
             <div className="md:hidden">
-              <hr className="w-full my-4 border-gray-300" />
+              <hr className="w-full my-4 border-gray-300 dark:border-gray-700" />
               <div className="flex justify-center gap-1 items-center">
                 <GiTeamIdea />
-                <Link to="/communities" className="text-primary font-medium">
+                <Link to="/communities" className="text-primary-500 dark:text-primary-400 font-medium hover:underline">
                   See all communities
                 </Link>
               </div>

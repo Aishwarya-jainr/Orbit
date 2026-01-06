@@ -80,7 +80,7 @@ const Rightbar = () => {
       {currentLocation !== "/communities" && (
         <div>
           <div className="flex items-end justify-between mb-4">
-            <h5 className="font-semibold text-sm">Suggested Communities</h5>
+            <h5 className="font-semibold text-sm text-gray-800 dark:text-gray-100">Suggested Communities</h5>
             {remainingCount > 0 && (
               <Link
                 className="flex relative items-center text-sm font-medium text-primary mr-4"
@@ -104,7 +104,7 @@ const Rightbar = () => {
             {visibleCommunities?.map((community) => (
               <li
                 key={community._id}
-                className="flex items-center justify-between bg-white px-2 py-1 rounded-md"
+                className="flex items-center justify-between bg-white dark:bg-gray-800 px-2 py-1 rounded-md border border-gray-200 dark:border-gray-700 transition-colors"
               >
                 <div className="flex items-center">
                   <img
@@ -112,10 +112,10 @@ const Rightbar = () => {
                     className="h-8 w-8 rounded-full mr-4 object-cover"
                     alt="community"
                   />
-                  <div className="text-base font-medium flex flex-col">
+                  <div className="text-base font-medium flex flex-col text-gray-800 dark:text-gray-100">
                     <p className="line-clamp-1"> {community.name}</p>
 
-                    <p className="text-xs text-gray-500 flex items-center gap-1">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
                       <IoMdPeople />
                       {community.members.length}
                     </p>
@@ -124,8 +124,8 @@ const Rightbar = () => {
 
                 <button
                   onClick={() => toggleJoinModal(community._id, true)}
-                  className="text-primary border border-dashed border-blue-500
-                        hover:bg-primary 
+                  className="text-primary-500 dark:text-primary-400 border border-dashed border-primary-500 dark:border-primary-400
+                        hover:bg-primary-500 dark:hover:bg-primary-600 
                          rounded-md py-1 px-2 text-sm font-semibold group transition duration-300"
                 >
                   <p className="group-hover:text-white flex items-center gap-2">
@@ -144,8 +144,8 @@ const Rightbar = () => {
         </div>
       )}
 
-      <hr className="my-3" />
-      <h5 className="mb-4 text-sm font-semibold">Popular Users to Follow</h5>
+      <hr className="my-3 border-gray-300 dark:border-gray-700" />
+      <h5 className="mb-4 text-sm font-semibold text-gray-800 dark:text-gray-100">Popular Users to Follow</h5>
 
       {publicUsersFetched && recommendedUsers?.length === 0 && (
         <div className="text-center italic text-gray-400">
@@ -157,7 +157,7 @@ const Rightbar = () => {
           recommendedUsers.map((user) => (
             <li
               key={user._id}
-              className="flex justify-between items-center gap-5 bg-white shadow-2xl shadow-[#f2f5fc]  border border-slate-100 px-2 py-1 rounded-lg"
+              className="flex justify-between items-center gap-5 bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700 px-2 py-1 rounded-lg transition-colors"
             >
               <div className="flex justify-content-between items-center gap-1">
                 <img
@@ -168,11 +168,11 @@ const Rightbar = () => {
                 <div>
                   <Link
                     to={`/user/${user._id}`}
-                    className="font-medium text-base line-clamp-1"
+                    className="font-medium text-base line-clamp-1 text-gray-800 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400"
                   >
                     {user.name}
                   </Link>
-                  <div className="text-xs text-slate-400">
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
                     Followers: {user.followerCount}
                   </div>
                 </div>
@@ -180,7 +180,7 @@ const Rightbar = () => {
               <button
                 disabled={followLoading[user._id]}
                 onClick={() => followUserHandler(user._id)}
-                className="text-primary border border-dashed border-blue-500 hover:bg-primary rounded-md py-1 px-2 text-sm font-semibold group transition duration-300"
+                className="text-primary-500 dark:text-primary-400 border border-dashed border-primary-500 dark:border-primary-400 hover:bg-primary-500 dark:hover:bg-primary-600 rounded-md py-1 px-2 text-sm font-semibold group transition duration-300"
               >
                 {followLoading[user._id] ? (
                   <div className="group-hover:text-white flex items-center gap-2 justify-center">

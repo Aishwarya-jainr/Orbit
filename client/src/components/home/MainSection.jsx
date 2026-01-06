@@ -71,7 +71,7 @@ const MainSection = ({ userData }) => {
       )}
 
       {posts.length === 0 && (
-        <div className="text-center text-gray-700 flex justify-center items-center flex-col">
+        <div className="text-center text-gray-700 dark:text-gray-200 flex justify-center items-center flex-col">
           <p className="py-5 font-semibold">
             No posts to show. Join a community and post something.
           </p>
