@@ -42,13 +42,13 @@ const Navbar = ({ userData, toggleLeftbar, showLeftbar }) => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-20 mb-5 flex justify-center gap-10 border bg-white p-2 md:items-center md:justify-between md:px-36">
+    <nav className="sticky top-0 z-20 mb-5 flex justify-center gap-4 md:gap-10 border-b border-gray-200 dark:border-gray-700 backdrop-blur-md bg-white/90 dark:bg-gray-900/90 p-3 md:p-4 md:items-center md:justify-between md:px-8 lg:px-20 xl:px-36 transition-colors duration-200">
       <Link to="/" className="hidden md:inline-block">
-        <img className="w-36" src={Logo} alt="" />
+        <img className="h-10 w-auto" src={Logo} alt="Orbit Logo" />
       </Link>
 
-      <button className="inline-block md:hidden" onClick={toggleLeftbar}>
-        {showLeftbar ? <RxCross1 /> : <AiOutlineBars />}
+      <button className="inline-block md:hidden text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors" onClick={toggleLeftbar}>
+        {showLeftbar ? <RxCross1 size={20} /> : <AiOutlineBars size={20} />}
       </button>
 
       <Search />
@@ -56,13 +56,13 @@ const Navbar = ({ userData, toggleLeftbar, showLeftbar }) => {
       <div className="relative flex justify-end md:w-36">
         <button
           type="button"
-          className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full"
+          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full ring-2 ring-gray-200 dark:ring-gray-700 hover:ring-primary-500 dark:hover:ring-primary-400 transition-all"
           onClick={handleProfileClick}
         >
           <img
             src={userData.avatar}
             alt="profile"
-            className="h-8 w-8 rounded-full object-cover"
+            className="h-10 w-10 rounded-full object-cover"
           />
         </button>
         <Transition
@@ -77,7 +77,7 @@ const Navbar = ({ userData, toggleLeftbar, showLeftbar }) => {
           {() => (
             <div
               ref={dropdownRef}
-              className="absolute right-0 top-10 mt-2 w-72 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              className="absolute right-0 top-12 mt-2 w-72 origin-top-right rounded-xl bg-white dark:bg-gray-800 shadow-xl ring-1 ring-black/5 dark:ring-white/10 focus:outline-none transition-colors duration-200"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu"
@@ -89,16 +89,16 @@ const Navbar = ({ userData, toggleLeftbar, showLeftbar }) => {
                     alt="profile"
                     className="mb-2 h-16 w-16 rounded-full object-cover"
                   />
-                  <div className="text-sm font-semibold text-gray-700 hover:underline">
+                  <div className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 hover:underline transition-colors">
                     <Link to={`/profile`}>{userData.name}</Link>
                   </div>
-                  <div className="text-sm text-gray-500">{userData.email}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{userData.email}</div>
                 </div>
-                <hr className="my-2" />
+                <hr className="my-2 border-gray-200 dark:border-gray-700" />
                 <div className="flex justify-center">
                   <button
                     type="button"
-                    className="block w-full px-4 py-2  text-left text-sm text-red-400 hover:cursor-pointer hover:text-red-600"
+                    className="block w-full px-4 py-2 text-left text-sm text-red-500 dark:text-red-400 hover:cursor-pointer hover:text-red-600 dark:hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors"
                     role="menuitem"
                     onClick={logout}
                     disabled={loggingOut}

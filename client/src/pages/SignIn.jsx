@@ -45,7 +45,7 @@ const SignIn = () => {
     <section className="bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="mx-auto flex min-h-screen flex-col items-center justify-center">
         <form className="w-full max-w-md">
-          <img className="mx-auto mb-6 h-16 w-auto sm:h-20" src={Logo} alt="Orbit Logo" />
+          <img className=" w-auto px-20" src={Logo} alt="Orbit Logo" />
           {signInError && (
             <div
               className="flex items-center justify-between rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
