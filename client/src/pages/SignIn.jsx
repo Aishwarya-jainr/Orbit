@@ -83,7 +83,7 @@ const SignIn = () => {
           <div className="mt-6 flex items-center justify-center">
             <Link
               to={"/signin"}
-              className="w-1/3 border-b-2 border-blue-500 pb-4 text-center font-medium text-gray-800 dark:text-gray-100"
+              className="w-1/3 border-b-2 border-primary-500 pb-4 text-center font-medium text-gray-800 dark:text-gray-100"
             >
               Sign In
             </Link>
@@ -118,7 +118,7 @@ const SignIn = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-11 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
+              className="block w-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-11 py-3 text-gray-700 dark:text-gray-200 focus:border-primary-400 dark:focus:border-primary-500 focus:outline-none focus:ring focus:ring-primary-300 dark:focus:ring-primary-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Email address"
               required
               autoComplete="off"
@@ -147,7 +147,7 @@ const SignIn = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-10 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
+              className="block w-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-10 py-3 text-gray-700 dark:text-gray-200 focus:border-primary-400 dark:focus:border-primary-500 focus:outline-none focus:ring focus:ring-primary-300 dark:focus:ring-primary-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Password"
               required
               autoComplete="off"
@@ -157,7 +157,7 @@ const SignIn = () => {
             <button
               disabled={loading}
               onClick={handleSubmit}
-              className={`w-full transform rounded-lg bg-blue-500 dark:bg-blue-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-50 ${loading ? "cursor-not-allowed opacity-50" : ""
+              className={`w-full transform rounded-2xl bg-primary-500 dark:bg-primary-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-primary-700 dark:hover:bg-primary-700 focus:outline-none focus:ring focus:ring-primary-300 dark:focus:ring-primary-800 focus:ring-opacity-50 ${loading ? "cursor-not-allowed opacity-50" : ""
                 }`}
             >
               {loading ? (
