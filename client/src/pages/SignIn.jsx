@@ -42,11 +42,11 @@ const SignIn = () => {
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="container mx-auto flex min-h-screen flex-col items-center justify-center px-6">
         <form className="w-full max-w-md">
           <div className="mx-auto flex justify-center">
-            <img className="h-7 w-auto sm:h-8" src={Logo} alt="" />
+            <img className="h-12 w-auto sm:h-14" src={Logo} alt="Orbit Logo" />
           </div>
           {signInError && (
             <div
@@ -83,13 +83,13 @@ const SignIn = () => {
           <div className="mt-6 flex items-center justify-center">
             <Link
               to={"/signin"}
-              className="w-1/3 border-b-2 border-blue-500 pb-4 text-center font-medium text-gray-800 "
+              className="w-1/3 border-b-2 border-blue-500 pb-4 text-center font-medium text-gray-800 dark:text-gray-100"
             >
               Sign In
             </Link>
             <Link
               to={"/signup"}
-              className="w-1/3 border-b border-gray-400 pb-4 text-center font-medium text-gray-500 "
+              className="w-1/3 border-b border-gray-400 dark:border-gray-600 pb-4 text-center font-medium text-gray-500 dark:text-gray-400"
             >
               Sign Up
             </Link>
@@ -118,7 +118,7 @@ const SignIn = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full rounded-lg border bg-white px-11 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-11 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Email address"
               required
               autoComplete="off"
@@ -147,7 +147,7 @@ const SignIn = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block w-full rounded-lg border bg-white px-10 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+              className="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-10 py-3 text-gray-700 dark:text-gray-200 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-40 transition-colors duration-200"
               placeholder="Password"
               required
               autoComplete="off"
@@ -157,7 +157,7 @@ const SignIn = () => {
             <button
               disabled={loading}
               onClick={handleSubmit}
-              className={`w-full transform rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 ${loading ? "cursor-not-allowed opacity-50" : ""
+              className={`w-full transform rounded-lg bg-blue-500 dark:bg-blue-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-opacity-50 ${loading ? "cursor-not-allowed opacity-50" : ""
                 }`}
             >
               {loading ? (
@@ -168,7 +168,7 @@ const SignIn = () => {
             </button>
           </div>
         </form>
-        <span className="flex items-center justify-center py-4 text-sm text-gray-600 ">
+        <span className="flex items-center justify-center py-4 text-sm text-gray-600 dark:text-gray-400">
           <a
             href="https://github.com/Aishwarya-jainr/SocioEcho"
             target="_blank"
