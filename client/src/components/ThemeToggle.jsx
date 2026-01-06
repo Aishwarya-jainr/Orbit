@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import { SunIcon, MoonIcon } from '@heroicons/react/outline';
 
 const ThemeToggle = () => {
     const [darkMode, setDarkMode] = useState(false);
