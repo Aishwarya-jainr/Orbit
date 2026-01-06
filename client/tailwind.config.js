@@ -35,18 +35,28 @@ module.exports = {
           300: "#2e2e2e",
         },
         primary: {
-          DEFAULT: "#008cff",
-          50: "#63ceff",
-          100: "#23b7fc",
-          200: "#00bfff",
-          300: "#00aeff",
-          400: "#0099ff",
-          500: "#008cff",
-          600: "#0067FF",
-          700: "#0040ff",
-          800: "#0e4bff",
-          900: "#0000ff",
+          DEFAULT: "#8B5CF6", // Electric Violet
+          50: "#F5F3FF",
+          100: "#EDE9FE",
+          200: "#DDD6FE",
+          300: "#C4B5FD",
+          400: "#A78BFA",
+          500: "#8B5CF6",
+          600: "#7C3AED",
+          700: "#6D28D9",
+          800: "#5B21B6",
+          900: "#4C1D95",
         },
+      },
+      borderRadius: {
+        'DEFAULT': '0.75rem', // 12px - modern default
+        'sm': '0.5rem',  // 8px
+        'md': '0.75rem', // 12px
+        'lg': '1rem',    // 16px
+        'xl': '1.5rem',  // 24px
+        '2xl': '2rem',   // 32px
+        '3xl': '3rem',   // 48px
+        'full': '9999px',
       },
     },
   },
