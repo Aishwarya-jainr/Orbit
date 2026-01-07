@@ -46,8 +46,7 @@ const AdminSignIn = () => {
 
       <div className="w-full max-w-sm mx-auto overflow-hidden bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 transition-colors duration-200">
         <div className="px-6 py-4">
-          <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100 mb-2">Admin Sign In</h2>
-          <p className="mt-1 text-center text-gray-500 dark:text-gray-400">Sign in as admin</p>
+          <h2 className="text-xl font-bold text-center text-gray-500 dark:text-gray-100 mb-2">Sign in as Admin</h2>
           <form>
             <div className="w-full mt-4">
               <input
